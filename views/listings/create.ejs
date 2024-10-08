@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling Website | Create User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-red-400 text-white h-screen flex items-center justify-center">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg fade-in">
+        <h2 class="text-red-600 text-4xl mb-8 font-bold text-center">Create User For Traveling Website</h2>
+        
+        <!-- Form with better visual styling -->
+        <form action="/create" method="GET">
+            <input class="block mb-4 w-full px-4 py-2 bg-gray-200 text-black rounded-md border-2 border-zinc-700 outline-none focus:border-blue-500 transition-colors duration-300" 
+                   type="text" placeholder="Username" name="username" required>
+            <input class="block mb-4 w-full px-4 py-2 bg-gray-200 text-black rounded-md border-2 border-zinc-700 outline-none focus:border-blue-500 transition-colors duration-300" 
+                   type="email" placeholder="Email" name="email" required>
+            <input class="block mb-4 w-full px-4 py-2 text-black bg-gray-200 rounded-md border-2 border-zinc-700 outline-none focus:border-blue-500 transition-colors duration-300" 
+                   type="password" placeholder="Password" name="password" required>
+            <!-- <input class="block mb-4 w-full px-4 py-2 text-black bg-gray-200 rounded-md border-2 border-zinc-700 outline-none focus:border-blue-500 transition-colors duration-300" 
+                   type="number" placeholder="Age" name="age" required> -->
+            <input class="block w-full px-4 py-2 bg-red-400 text-white rounded-md hover:bg-red-600 cursor-pointer font-semibold transition-colors duration-300" 
+                   type="submit" value="Create User">
+        </form>
+        
+        <!-- Link to login page -->
+        <div class="text-center mt-6">
+            <a class="text-blue-400 hover:underline" href="http://localhost:3000/login">Already have an account? Login</a>
+        </div>
+    </div>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {},
+          },
+        }
+      </script>
+      
+</body>
+</html>
